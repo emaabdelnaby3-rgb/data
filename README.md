@@ -43,5 +43,6 @@ uvicorn app.main:app --reload
 - Home: `http://127.0.0.1:8000/`
 - API docs: `http://127.0.0.1:8000/docs`
 
-## ملاحظة
-جزء الـ Data Engineering (Kafka/Spark/DWH) غير مضاف بناءً على الطلب.
+## Notes
+- هذا الإصدار يركز على الفرونت/باك/API فقط.
+- جزء الـ Data Engineering (Kafka/Spark/DWH) غير مضمّن حسب الطلب، ويمكن وصله لاحقًا عبر event bus.

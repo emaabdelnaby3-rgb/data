@@ -1,26 +1,34 @@
 from typing import Optional
-
 from pydantic import BaseModel, EmailStr, Field, field_validator
 
-from .models import PaymentMethod, Priority
+from .models import Priority, Role
 
 
-class DonorRegisterRequest(BaseModel):
+class RegisterRequest(BaseModel):
     full_name: str = Field(min_length=3, max_length=120)
     email: EmailStr
-    national_id: str = Field(min_length=14, max_length=14)
     password: str = Field(min_length=8, max_length=128)
+    role: Role
+    organization_id: Optional[int] = None
+    national_id: Optional[str] = Field(default=None, min_length=8, max_length=20)
     phone: Optional[str] = Field(default=None, min_length=8, max_length=20)
 
 
 class LoginRequest(BaseModel):
-    identifier: str = Field(min_length=3, max_length=120)
+    email: EmailStr
     password: str = Field(min_length=8, max_length=128)
 
 
 class TokenResponse(BaseModel):
     access_token: str
     token_type: str = "bearer"
+
+
+class BeneficiaryRegistrationRequest(BaseModel):
+    monthly_income: float = Field(ge=0)
+    family_members: int = Field(ge=1, le=30)
+    medical_condition: Optional[str] = Field(default=None, max_length=600)
+    documents_url: str = Field(min_length=5, max_length=300)
 
 
 class CreateCaseRequest(BaseModel):
@@ -33,7 +41,6 @@ class CreateCaseRequest(BaseModel):
 
 class DonateRequest(BaseModel):
     amount: float = Field(gt=0)
-    payment_method: PaymentMethod
 
     @field_validator("amount")
     @classmethod

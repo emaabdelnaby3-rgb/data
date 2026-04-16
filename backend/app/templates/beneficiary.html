@@ -2,26 +2,14 @@
 {% block content %}
 <div class="card shadow-sm">
   <div class="card-body">
-    <h2>استمارة بيانات المحتاج</h2>
-    <p class="text-muted">تأكد من تسجيل الدخول أولًا ثم املأ البيانات وارفع المستندات المطلوبة.</p>
-    <form id="beneficiaryForm" class="row g-3" enctype="multipart/form-data">
-      <div class="col-md-4"><input type="number" min="18" class="form-control" id="age" placeholder="السن" required></div>
-      <div class="col-md-4"><input type="number" min="0" class="form-control" id="childrenCount" placeholder="عدد الأطفال" required></div>
-      <div class="col-md-4"><input type="number" min="0" class="form-control" id="monthlyIncome" placeholder="الدخل الشهري" required></div>
-      <div class="col-md-6">
-        <label class="form-label">متزوج؟</label>
-        <select id="isMarried" class="form-select"><option value="true">نعم</option><option value="false">لا</option></select>
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">لديه عمل؟</label>
-        <select id="hasJob" class="form-select"><option value="true">نعم</option><option value="false">لا</option></select>
-      </div>
-      <div class="col-md-6"><input type="number" min="0" class="form-control" id="salary" placeholder="المرتب الحالي" required></div>
-      <div class="col-md-6"><textarea class="form-control" id="medicalCondition" placeholder="وصف الحالة"></textarea></div>
-      <div class="col-md-4"><label class="form-label">صورة البطاقة</label><input type="file" class="form-control" id="idCardFile" accept="image/*,.pdf" required></div>
-      <div class="col-md-4"><label class="form-label">شهادات الميلاد</label><input type="file" class="form-control" id="birthsFile" accept="image/*,.pdf" required></div>
-      <div class="col-md-4"><label class="form-label">مستندات إضافية</label><input type="file" class="form-control" id="extraFile" accept="image/*,.pdf"></div>
-      <div class="col-12"><button class="btn btn-primary">إرسال الاستمارة</button></div>
+    <h2>تسجيل كمحتاج</h2>
+    <p class="text-muted">بعد تسجيل الدخول وتخزين التوكن، املأ بياناتك وارفع رابط المستندات.</p>
+    <form id="beneficiaryForm" class="row g-3">
+      <div class="col-md-6"><input type="number" min="0" class="form-control" id="monthlyIncome" placeholder="الدخل الشهري" required></div>
+      <div class="col-md-6"><input type="number" min="1" class="form-control" id="familyMembers" placeholder="عدد أفراد الأسرة" required></div>
+      <div class="col-12"><textarea class="form-control" id="medicalCondition" placeholder="وصف الحالة الصحية"></textarea></div>
+      <div class="col-12"><input class="form-control" id="documentsUrl" placeholder="رابط المستندات" required></div>
+      <div class="col-12"><button class="btn btn-primary">إرسال</button></div>
     </form>
   </div>
 </div>
