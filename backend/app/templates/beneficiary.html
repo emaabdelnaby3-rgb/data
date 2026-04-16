@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h2>تسجيل كمحتاج</h2>
+    <p class="text-muted">بعد تسجيل الدخول وتخزين التوكن، املأ بياناتك وارفع رابط المستندات.</p>
+    <form id="beneficiaryForm" class="row g-3">
+      <div class="col-md-6"><input type="number" min="0" class="form-control" id="monthlyIncome" placeholder="الدخل الشهري" required></div>
+      <div class="col-md-6"><input type="number" min="1" class="form-control" id="familyMembers" placeholder="عدد أفراد الأسرة" required></div>
+      <div class="col-12"><textarea class="form-control" id="medicalCondition" placeholder="وصف الحالة الصحية"></textarea></div>
+      <div class="col-12"><input class="form-control" id="documentsUrl" placeholder="رابط المستندات" required></div>
+      <div class="col-12"><button class="btn btn-primary">إرسال</button></div>
+    </form>
+  </div>
+</div>
+{% endblock %}

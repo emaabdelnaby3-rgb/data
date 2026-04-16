@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h2 class="mb-3">إنشاء حساب جديد</h2>
+    <form id="registerForm" class="row g-3">
+      <div class="col-md-6"><input class="form-control" id="fullName" placeholder="الاسم الكامل" required></div>
+      <div class="col-md-6"><input type="email" class="form-control" id="email" placeholder="البريد الإلكتروني" required></div>
+      <div class="col-md-6"><input type="password" class="form-control" id="password" placeholder="كلمة المرور (8 أحرف+)" required></div>
+      <div class="col-md-6"><input class="form-control" id="nationalId" placeholder="الرقم القومي"></div>
+      <div class="col-md-6"><input class="form-control" id="phone" placeholder="رقم الهاتف"></div>
+      <div class="col-md-3">
+        <select id="role" class="form-select" required>
+          <option value="donor">متبرع</option>
+          <option value="beneficiary">محتاج</option>
+          <option value="admin">أدمن</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select id="organization" class="form-select"></select>
+      </div>
+      <div class="col-12"><button class="btn btn-success">تسجيل</button></div>
+    </form>
+  </div>
+</div>
+{% endblock %}
