@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h2 class="mb-3">تسجيل الدخول</h2>
+    <form id="loginForm" class="row g-3">
+      <div class="col-12">
+        <input type="email" id="loginEmail" class="form-control" placeholder="البريد الإلكتروني" required>
+      </div>
+      <div class="col-12">
+        <input type="password" id="loginPassword" class="form-control" placeholder="كلمة المرور" required>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary">دخول</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
