@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="p-4 bg-light rounded-4 shadow-sm mb-4">
+  <h1 class="mb-3">منصة حكومية موحدة للجمعيات الخيرية</h1>
+  <p>منع ازدواج صرف المساعدات، متابعة الحالات بالكود الموحد، وإتاحة التبرع بوسائل دفع متعددة.</p>
+</section>
+
+<section class="p-4 bg-white rounded-4 shadow-sm">
+  <h3>تبرع مباشر للجمعية</h3>
+  <form id="directDonationForm" class="row g-3">
+    <div class="col-md-4">
+      <label class="form-label">الجمعية</label>
+      <select class="form-select" id="directOrg" required></select>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">المبلغ</label>
+      <input type="number" class="form-control" id="directAmount" min="1" step="0.01" required>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">طريقة الدفع</label>
+      <select class="form-select" id="directPaymentMethod" required>
+        <option value="vodafone_cash">فودافون كاش</option>
+        <option value="instapay">انستا باي</option>
+        <option value="visa">فيزا</option>
+      </select>
+    </div>
+    <div class="col-12"><button class="btn btn-success">تبرع الآن</button></div>
+  </form>
+</section>
+{% endblock %}

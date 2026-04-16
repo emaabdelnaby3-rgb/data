@@ -1,0 +1,16 @@
+body { background: #f2f5fa; font-family: "Tahoma", sans-serif; margin: 0; }
+.layout { display: flex; min-height: 100vh; }
+.sidebar {
+  width: 240px;
+  background: #0d2b4d;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar a { color: #dce7f3; text-decoration: none; padding: 8px 10px; border-radius: 8px; }
+.sidebar a:hover { background: #17416e; color: #fff; }
+.content { flex: 1; padding: 24px; }
+.card { border-radius: 14px; }
+h1,h2,h3,h4,h5 { color: #1f2d3d; }

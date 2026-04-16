@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h2 class="mb-3">تسجيل متبرع جديد</h2>
+    <form id="registerForm" class="row g-3">
+      <div class="col-md-6"><input class="form-control" id="fullName" placeholder="الاسم الكامل" required></div>
+      <div class="col-md-6"><input type="email" class="form-control" id="email" placeholder="البريد الإلكتروني" required></div>
+      <div class="col-md-6"><input type="text" class="form-control" id="nationalId" placeholder="الرقم القومي 14 رقم" required></div>
+      <div class="col-md-6"><input type="text" class="form-control" id="phone" placeholder="رقم الهاتف"></div>
+      <div class="col-md-6"><input type="password" class="form-control" id="password" placeholder="كلمة المرور" required></div>
+      <div class="col-12"><button class="btn btn-success">إنشاء حساب متبرع</button></div>
+    </form>
+  </div>
+</div>
+{% endblock %}
